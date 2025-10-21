@@ -1,0 +1,32 @@
+.footer {
+  padding: 100px 0 60px 0;
+}
+
+.footer_subtitle {
+  margin-top: 25px;
+}
+
+.footer_links {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.link_blocks {
+  display: flex;
+  gap: 16px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 61px;
+  color: var(--copyright-color);
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+}
