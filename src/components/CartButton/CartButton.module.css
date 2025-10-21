@@ -1,0 +1,20 @@
+.button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--btn-radius);
+  padding: 20px 17px 20px 13px;
+  position: relative;
+}
+
+.button_counter {
+  background-color: var(--on-primary-color);
+  border-radius: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  right: -5px;
+}
