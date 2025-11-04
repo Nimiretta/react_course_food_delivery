@@ -32,6 +32,5 @@ button {
 
 .page {
   width: 100%;
-  padding: var(--page-vertical-indent-standard) 0
-    var(--page-vertical-indent-standard) 0;
+  padding: var(--page-vertical-indent-standard) 0;
 }
