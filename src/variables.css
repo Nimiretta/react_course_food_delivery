@@ -1,0 +1,22 @@
+:root {
+  /* Colors */
+  --primary-color: #35b8be;
+  --on-primary-color: #ffffff;
+  --divider-color: #7e828f17;
+  --text-color: #546285;
+  --nav-item-color: #28224b;
+  --title-color: #08090a;
+  --copyright-color: #353448;
+
+  /* Border radius */
+  --btn-radius: 5px;
+
+  /* Font */
+  --font-family: 'Inter', sans-serif;
+
+  /* Layout */
+  --content-width: 1200px;
+  --app-max-width: 1440px;
+  --page-vertical-indent-standard: 140px;
+  --page-vertical-indent-small: 100px;
+}

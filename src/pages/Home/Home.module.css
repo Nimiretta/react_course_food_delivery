@@ -1,0 +1,28 @@
+.home_section {
+  padding-top: var(--page-vertical-indent-small);
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.home_section_left {
+  flex-grow: 2;
+}
+
+.home_section h1 {
+  margin-bottom: 27px;
+}
+
+.home_section_subtitle {
+  width: 540px;
+  margin-bottom: 53px;
+}
+
+.trustpilot_block {
+  margin-top: 30px;
+}
+
+.trustpilot_text {
+  color: var(--title-color);
+  margin-top: 10px;
+}

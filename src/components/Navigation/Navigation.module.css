@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav_item {
+  color: var(--nav-item-color);
+}
