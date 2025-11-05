@@ -34,3 +34,28 @@ button {
   width: 100%;
   padding: var(--page-vertical-indent-standard) 0;
 }
+
+.wrapper-basic-page {
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper-basic-page:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--main-bg-color);
+  clip-path: polygon(100% 0, 0 70px, 0 100%, 100% 100%);
+  z-index: 0;
+}
+
+.wrapper-basic-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.error-text {
+  font-size: 25px;
+  color: var(--error-text-color);
+  text-align: center;
+}

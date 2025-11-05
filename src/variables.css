@@ -7,9 +7,17 @@
   --nav-item-color: #28224b;
   --title-color: #08090a;
   --copyright-color: #353448;
+  --on-light-color: #000000;
+  --input-bg-color: #fafafa;
+  --input-border-color: #dddddd;
+  --card-border-color: #35b8be26;
+  --main-bg-color: #f5fbfc;
+  --on-transparent-color: #222222;
+  --secondary-border-color: #61728333;
+  --error-text-color: #d32f2f;
 
   /* Border radius */
-  --btn-radius: 5px;
+  --border-radius-standard: 5px;
 
   /* Font */
   --font-family: 'Inter', sans-serif;

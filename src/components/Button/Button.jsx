@@ -1,5 +1,13 @@
 import styles from './Button.module.css';
 
-export function Button({ text, option = 'primary' }) {
-  return <button className={`btn-text ${styles[option]}`}>{text}</button>;
+export function Button({ text, option = 'primary', type = 'button', onClick }) {
+  return (
+    <button
+      className={`btn-text ${styles[option]}`}
+      type={type}
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
 }

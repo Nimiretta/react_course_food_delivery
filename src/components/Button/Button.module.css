@@ -1,6 +1,22 @@
 .primary {
   background-color: var(--primary-color);
   border: none;
-  border-radius: var(--btn-radius);
+  border-radius: var(--border-radius-standard);
+  padding: 20px 35px;
+}
+
+.primary_card {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius-standard);
+  padding: 10px 27px;
+  letter-spacing: 0.36px;
+}
+
+.secondary {
+  color: var(--on-transparent-color);
+  background-color: transparent;
+  border-radius: var(--border-radius-standard);
+  border: 1px solid var(--secondary-border-color);
   padding: 20px 35px;
 }

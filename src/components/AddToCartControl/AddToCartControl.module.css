@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  gap: 8px;
+}
+
+.form > :first-child {
+  flex: 1.2;
+}
+
+.form > :last-child {
+  flex: 2.5;
+}
