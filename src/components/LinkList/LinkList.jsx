@@ -7,8 +7,8 @@ export function LinkList({ title, items }) {
       <ul className={styles.list_container}>
         {items.map((item, i) => (
           <li key={i}>
-            <a className="link" href="#">
-              {item}
+            <a className="link" href={item.link}>
+              {item.name}
             </a>
           </li>
         ))}

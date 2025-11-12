@@ -3,13 +3,13 @@ import styles from './Header.module.css';
 import { Logo } from '../Logo';
 import { Navigation } from '../Navigation';
 
-export function Header() {
+export function Header({ cartCounter }) {
   return (
     <header className={`container ${styles.header}`}>
       <Logo />
       <div className={styles.right_container}>
         <Navigation />
-        <CartButton />
+        <CartButton count={cartCounter} />
       </div>
     </header>
   );

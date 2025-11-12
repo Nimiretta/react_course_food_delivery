@@ -1,7 +1,7 @@
 import styles from './Navigation.module.css';
 import { navItems } from '../../data.config';
 
-const isCurrent = (item) => item === 'Home';
+const isCurrent = (item) => item === 'Menu';
 
 export function Navigation() {
   return (

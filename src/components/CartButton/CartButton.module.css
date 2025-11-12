@@ -1,7 +1,7 @@
 .button {
   background-color: var(--primary-color);
   border: none;
-  border-radius: var(--btn-radius);
+  border-radius: var(--border-radius-standard);
   padding: 20px 17px 20px 13px;
   position: relative;
 }
