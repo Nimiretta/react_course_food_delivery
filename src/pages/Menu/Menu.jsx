@@ -9,6 +9,7 @@ export function Menu({ setCartCounter }) {
   const [meals, setMeals] = useState([]);
   const [itemCount, setItemCount] = useState(6);
   const [error, setError] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(null);
 
   useEffect(() => {
     getMeals()
@@ -21,6 +22,14 @@ export function Menu({ setCartCounter }) {
   const categories = useMemo(
     () => [...new Set(meals.map((m) => m.category))],
     [meals]
+  );
+
+  const filteredMeals = useMemo(
+    () =>
+      activeCategory
+        ? meals.filter((m) => m.category === activeCategory)
+        : meals,
+    [meals, activeCategory]
   );
 
   return (
@@ -40,7 +49,17 @@ export function Menu({ setCartCounter }) {
         </p>
         <div className={styles.btn_block}>
           {categories.map((category) => (
-            <Button key={category} text={category} option="secondary" />
+            <Button
+              key={category}
+              text={category}
+              option={activeCategory === category ? 'primary' : 'secondary'}
+              onClick={() => {
+                setActiveCategory((prev) =>
+                  prev === category ? null : category
+                );
+                setItemCount(6);
+              }}
+            />
           ))}
         </div>
         {error ? (
@@ -48,7 +67,7 @@ export function Menu({ setCartCounter }) {
         ) : (
           <>
             <div className={styles.card_list}>
-              {meals.slice(0, itemCount).map((meal) => (
+              {filteredMeals.slice(0, itemCount).map((meal) => (
                 <Card
                   key={meal.id}
                   meal={meal}
@@ -56,7 +75,7 @@ export function Menu({ setCartCounter }) {
                 />
               ))}
             </div>
-            {itemCount < meals.length && (
+            {itemCount < filteredMeals.length && (
               <Button
                 text="See more"
                 onClick={() => setItemCount((prev) => prev + 6)}
