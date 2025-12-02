@@ -1,23 +1,15 @@
 import styles from './Menu.module.css';
 import { Button } from '../../components/Button';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Card } from '../../components/Card';
+import { useFetch } from '../../hooks/useFetch';
 import { getMeals } from '../../api/mealApi';
 import { mainPhoneNumber } from '../../data.config.js';
 
 export function Menu({ setCartCounter }) {
-  const [meals, setMeals] = useState([]);
   const [itemCount, setItemCount] = useState(6);
-  const [error, setError] = useState(null);
   const [activeCategory, setActiveCategory] = useState(null);
-
-  useEffect(() => {
-    getMeals()
-      .then((fetchedMeals) => {
-        setMeals(fetchedMeals);
-      })
-      .catch(() => setError('Failed to load meals'));
-  }, []);
+  const [meals, error] = useFetch(getMeals, 'Failed to load meals');
 
   const categories = useMemo(
     () => [...new Set(meals.map((m) => m.category))],
